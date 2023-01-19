@@ -55,6 +55,3 @@ ll_print(ll* ll)
 }
 
 
-
-
-
