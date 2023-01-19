@@ -45,18 +45,6 @@ ll_destroy(ll* ll)
     ll = NULL;
 }
 
-int
-ll_size(ll* ll)
-{
-    ll->size = 0;
-    ListNode *head = ll->head;
-    while (head) {
-        ++ll->size;
-        head = head->next;
-    }
-    return ll->size;
-}
-
 void
 ll_print(ll* ll)
 {
