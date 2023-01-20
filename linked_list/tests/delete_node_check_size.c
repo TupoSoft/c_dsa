@@ -1,5 +1,6 @@
+// ^2
 #include <printf.h>
-#include "../linked_list.h"
+#include <linked_list.h>
 
 int main(void)
 {

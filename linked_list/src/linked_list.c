@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <printf.h>
-#include "linked_list.h"
+#include <linked_list.h>
 
 static void
 push_node(ListNode **prev, int data)
@@ -53,5 +53,3 @@ ll_print(ll* ll)
     }
     printf("\n");
 }
-
-

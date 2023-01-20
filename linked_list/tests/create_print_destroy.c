@@ -1,4 +1,5 @@
-#include "../linked_list.h"
+// ^1 -> 2 -> 3 ->
+#include <linked_list.h>
 
 int main(void)
 {
