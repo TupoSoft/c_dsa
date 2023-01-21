@@ -11,7 +11,7 @@ typedef struct {
     ListNode* head;
 } ll;
 
-ll *ll_create(int data[], int size);
+ll *ll_create(const int data[], int size);
 void ll_remove_node(ll *ll, ListNode **node);
 void ll_destroy(ll *ll);
 void ll_print(ll* ll);

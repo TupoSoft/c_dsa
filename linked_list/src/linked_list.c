@@ -2,29 +2,24 @@
 #include <printf.h>
 #include <linked_list.h>
 
-static void
-push_node(ListNode **prev, int data)
-{
-    ListNode* new = malloc(sizeof(ListNode));
-    new->val = data;
-    new->next = *prev;
-    *prev = new;
-}
-
 ll *
-ll_create(int data[], int size)
+ll_create(const int data[], int size)
 {
-    ll *new = malloc(sizeof(ll));
-    new->size = size;
+    ll *ll = malloc(sizeof *ll);
+    ll->size = size;
     for (; size; --size) {
-        push_node(&new->head, data[size - 1]);
+        ListNode* new = malloc(sizeof(ListNode));
+        new->val = data[size - 1];
+        new->next = ll->head;
+        ll->head = new;
     }
-    return new;
+    return ll;
 }
 
 void
 ll_remove_node(ll *ll, ListNode **node)
 {
+    if (!(*node)) return;
     ListNode *tmp = *node;
     *node = (*node)->next;
     free(tmp);
@@ -49,7 +44,7 @@ void
 ll_print(ll* ll)
 {
     for (ListNode *n = ll->head; n; n = n->next) {
-        printf("%d -> ", n->val);
+        printf(n->next ? "%d -> " : "%d", n->val);
     }
     printf("\n");
 }
