@@ -1,0 +1,19 @@
+# Run unit tests using CTest
+name: Tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  run-unit-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run unit tests
+        uses: HorstBaerbel/action-ctest@1.1
+        with:
+          cmakeoptions: '-D TESTING=1'
