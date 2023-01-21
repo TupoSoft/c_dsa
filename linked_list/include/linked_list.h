@@ -9,11 +9,11 @@ typedef struct ListNode {
 typedef struct {
     int size;
     ListNode* head;
-} ll;
+} LinkedList;
 
-ll *ll_create(const int data[], int size);
-void ll_remove_node(ll *ll, ListNode **node);
-void ll_destroy(ll *ll);
-void ll_print(ll* ll);
+LinkedList *ll_create(const int data[], int size);
+void ll_remove_node(LinkedList *ll, ListNode **node);
+void ll_destroy(LinkedList *ll);
+void ll_print(LinkedList* ll);
 
 #endif //LINKED_LIST_H

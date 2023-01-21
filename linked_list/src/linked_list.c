@@ -2,10 +2,10 @@
 #include <printf.h>
 #include <linked_list.h>
 
-ll *
+LinkedList *
 ll_create(const int data[], int size)
 {
-    ll *ll = malloc(sizeof *ll);
+    LinkedList *ll = malloc(sizeof *ll);
     ll->size = size;
     for (; size; --size) {
         ListNode* new = malloc(sizeof(ListNode));
@@ -17,7 +17,7 @@ ll_create(const int data[], int size)
 }
 
 void
-ll_remove_node(ll *ll, ListNode **node)
+ll_remove_node(LinkedList *ll, ListNode **node)
 {
     if (!(*node)) return;
     ListNode *tmp = *node;
@@ -28,7 +28,7 @@ ll_remove_node(ll *ll, ListNode **node)
 }
 
 void
-ll_destroy(ll* ll)
+ll_destroy(LinkedList* ll)
 {
     for (ListNode *curr = ll->head; ll->size; --(ll->size)) {
         ListNode *next = curr->next;
@@ -41,7 +41,7 @@ ll_destroy(ll* ll)
 }
 
 void
-ll_print(ll* ll)
+ll_print(LinkedList* ll)
 {
     for (ListNode *n = ll->head; n; n = n->next) {
         printf(n->next ? "%d -> " : "%d", n->val);

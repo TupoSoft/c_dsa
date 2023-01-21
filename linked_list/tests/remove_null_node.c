@@ -6,7 +6,7 @@
 int main(void)
 {
     int arr1[] = {1, 2, 3};
-    ll* ll = ll_create(arr1, 3);
+    LinkedList* ll = ll_create(arr1, 3);
     ListNode *null = NULL;
     ll_remove_node(ll, &null);
     printf("%d", 0);

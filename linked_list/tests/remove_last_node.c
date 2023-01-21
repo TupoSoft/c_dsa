@@ -4,7 +4,7 @@
 int main(void)
 {
     int arr1[] = {1, 2, 3};
-    ll* ll = ll_create(arr1, 3);
+    LinkedList* ll = ll_create(arr1, 3);
     ll_remove_node(ll, &ll->head->next->next);
     ll_print(ll);
     ll_destroy(ll);
