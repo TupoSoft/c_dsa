@@ -7,6 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run unit tests
-        uses: HorstBaerbel/action-ctest@1.1
+        uses: KyryloKupin/action-ctest@master
         with:
           cmakeoptions: '-D TESTING=1'
