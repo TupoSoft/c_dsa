@@ -7,6 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run unit tests
-        uses: KyryloKupin/action-ctest@master
+        uses: KyryloKupin/action-ctest@v1
         with:
-          cmakeoptions: '-D TESTING=1'
+          cmakeoptions: '-D CMAKE_BUILD_TYPE=Release -D TESTING=1'
