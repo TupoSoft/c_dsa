@@ -1,0 +1,12 @@
+# Run unit tests using CTest
+name: Tests
+on: pull_request
+jobs:
+  unit-tests:
+    runs-on: cmake
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run unit tests
+        uses: KyryloKupin/action-ctest@v1
+        with:
+          cmakeoptions: '-D CMAKE_BUILD_TYPE=Release -D TESTING=1'
