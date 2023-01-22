@@ -6,7 +6,7 @@ typedef struct ListNode {
     struct ListNode *next;
 } ListNode;
 
-ListNode *list_create(const int data[], int size);
+ListNode *list_create(const int data[], int dataSize);
 
 void list_remove_node(ListNode **node);
 
