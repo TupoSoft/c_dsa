@@ -1,16 +1,15 @@
-// ^0
+// ^1 -> 2 -> 3
 #include <stddef.h>
 #include <linked_list.h>
-#include <stdio.h>
 
 int main(void)
 {
-    int arr1[] = {1, 2, 3};
-    LinkedList* ll = ll_create(arr1, 3);
+    int data[] = {1, 2, 3};
+    int dataSize = sizeof data / sizeof *data;
+    ListNode *head = list_create(data, dataSize);
     ListNode *null = NULL;
-    ll_remove_node(ll, &null);
-    printf("%d", 0);
-    ll_print(ll);
-    ll_destroy(ll);
+    list_remove_node(&null);
+    list_print(head);
+    list_destroy(head);
     return 0;
 }

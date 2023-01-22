@@ -3,10 +3,11 @@
 
 int main(void)
 {
-    int arr1[] = {1, 2, 3};
-    LinkedList* ll = ll_create(arr1, 3);
-    ll_remove_node(ll, &ll->head);
-    ll_print(ll);
-    ll_destroy(ll);
+    int data[] = {1, 2, 3};
+    int dataSize = sizeof data / sizeof *data;
+    ListNode *head = list_create(data, dataSize);
+    list_remove_node(&head);
+    list_print(head);
+    list_destroy(head);
     return 0;
 }

@@ -2,49 +2,46 @@
 #include <stdio.h>
 #include <linked_list.h>
 
-LinkedList *
-ll_create(const int data[], int size)
+ListNode *
+list_create(const int data[], int dataSize)
 {
-    LinkedList *ll = malloc(sizeof *ll);
-    ll->size = size;
-    for (; size; --size) {
+    ListNode *head = NULL;
+    for (; dataSize; --dataSize) {
         ListNode* new = malloc(sizeof(ListNode));
-        new->val = data[size - 1];
-        new->next = ll->head;
-        ll->head = new;
+        new->val = data[dataSize - 1];
+        new->next = head;
+        head = new;
     }
-    return ll;
+    return head;
 }
 
 void
-ll_remove_node(LinkedList *ll, ListNode **node)
+list_remove_node(ListNode **node)
 {
     if (!(*node)) return;
     ListNode *tmp = *node;
     *node = (*node)->next;
     free(tmp);
     tmp = NULL;
-    --ll->size;
 }
 
 void
-ll_destroy(LinkedList* ll)
+list_destroy(ListNode *head)
 {
-    for (ListNode *curr = ll->head; ll->size; --(ll->size)) {
-        ListNode *next = curr->next;
-        free(curr);
-        curr = NULL;
-        curr = next;
+    while (head) {
+        ListNode *next = head->next;
+        free(head);
+        head = NULL;
+        head = next;
     }
-    free(ll);
-    ll = NULL;
 }
 
 void
-ll_print(LinkedList* ll)
+list_print(ListNode *head)
 {
-    for (ListNode *n = ll->head; n; n = n->next) {
-        printf(n->next ? "%d -> " : "%d", n->val);
+    while (head) {
+        printf(head->next ? "%d -> " : "%d", head->val);
+        head = head->next;
     }
     printf("\n");
 }

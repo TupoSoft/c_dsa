@@ -3,17 +3,15 @@
 
 typedef struct ListNode {
     int val;
-    struct ListNode* next;
+    struct ListNode *next;
 } ListNode;
 
-typedef struct {
-    int size;
-    ListNode* head;
-} LinkedList;
+ListNode *list_create(const int data[], int size);
 
-LinkedList *ll_create(const int data[], int size);
-void ll_remove_node(LinkedList *ll, ListNode **node);
-void ll_destroy(LinkedList *ll);
-void ll_print(LinkedList* ll);
+void list_remove_node(ListNode **node);
+
+void list_destroy(ListNode *head);
+
+void list_print(ListNode *head);
 
 #endif //LINKED_LIST_H
