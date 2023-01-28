@@ -19,4 +19,4 @@ TreeNode *binary_tree_destroy(TreeNode *head);
 
 void binary_tree_print(const FILE* fd, TreeNode *head);
 
-#endif //LINKED_LIST_H
+#endif //BINARY_TREE_H
