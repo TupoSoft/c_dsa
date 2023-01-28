@@ -19,6 +19,6 @@ TreeNode *binary_tree_remove_element(TreeNode *head, const int val);
 
 void binary_tree_destroy(TreeNode *head);
 
-void binary_tree_print(const FILE* fd, TreeNode *head);
+void binary_tree_print(FILE* fd, TreeNode *head);
 
 #endif //BINARY_TREE_H

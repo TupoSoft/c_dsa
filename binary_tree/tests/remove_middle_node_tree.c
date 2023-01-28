@@ -12,6 +12,6 @@ int main(void)
 
     head = binary_tree_remove_element(head, 2);
     binary_tree_print(stdout, head);
-    head = binary_tree_destroy(head);
+    binary_tree_destroy(head);
     return 0;
 }

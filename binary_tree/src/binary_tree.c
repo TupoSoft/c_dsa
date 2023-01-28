@@ -68,14 +68,14 @@ binary_tree_remove_element(TreeNode *head, const int val)
 void
 binary_tree_destroy(TreeNode *head)
 {
-    if (!head) return head;
+    if (!head) return;
     binary_tree_destroy(head->left);
     binary_tree_destroy(head->right);
     free(head);
 }
 
 void
-binary_tree_print(const FILE* fd, TreeNode *head)
+binary_tree_print(FILE* fd, TreeNode *head)
 {
     if (!head) return;
 
