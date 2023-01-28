@@ -3,6 +3,7 @@ project(c_dsa C)
 set(CMAKE_C_STANDARD 23)
 
 add_subdirectory(linked_list)
+add_subdirectory(binary_tree)
 
 option(TESTING "Run unit tests" 0)
 if (${TESTING})
