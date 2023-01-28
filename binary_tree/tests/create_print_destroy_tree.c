@@ -1,4 +1,4 @@
-// ^1 -> 2 -> 3
+// ^1 2 3 
 #include <stdio.h>
 #include <binary_tree.h>
 
