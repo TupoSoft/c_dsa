@@ -17,7 +17,7 @@ TreeNode *
 binary_tree_insert_element(TreeNode *head, const int val)
 {
     if (!head)
-        binary_tree_create_node(val);
+        return binary_tree_create_node(val);
 
     if (val > head->val) 
         head->right = binary_tree_insert_element(head->right, val);
