@@ -10,6 +10,7 @@ int main(void)
 
     for (int i = 0; i < dataSize; ++i) head = binary_tree_insert_element(head, data[i]);
 
+    head = binary_tree_remove_element(head, 4);
     binary_tree_print(stdout, head);
     head = binary_tree_destroy(head);
     return 0;
