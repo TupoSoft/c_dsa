@@ -72,8 +72,6 @@ binary_tree_destroy(TreeNode *head)
     binary_tree_destroy(head->left);
     binary_tree_destroy(head->right);
     free(head);
-
-    return NULL;
 }
 
 void
