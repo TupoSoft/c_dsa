@@ -80,7 +80,8 @@ void
 binary_tree_print(const FILE* fd, TreeNode *head)
 {
     if (!head) return;
-    fprintf(fd, "%d ", head->val);
+
     binary_tree_print(fd, head->left);
+    fprintf(fd, "%d ", head->val);
     binary_tree_print(fd, head->right);
 }
