@@ -32,7 +32,7 @@ binary_tree_smallest_node(TreeNode *head)
 {
     struct TreeNode *cur = head;
 
-    while(cur && cur->left) cur = cur->left;
+    while (cur && cur->left) cur = cur->left;
 
     return cur;
 }
