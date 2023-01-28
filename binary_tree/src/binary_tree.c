@@ -30,7 +30,7 @@ binary_tree_insert_element(TreeNode *head, const int val)
 TreeNode *
 binary_tree_smallest_node(TreeNode *head)
 {
-    struct TreeNode *cur = head;
+    TreeNode *cur = head;
 
     while (cur && cur->left) cur = cur->left;
 
@@ -47,17 +47,17 @@ binary_tree_remove_element(TreeNode *head, const int val)
     else {
         if (!head->left && !head->right) return NULL;
         else if (!head->left) {
-            struct TreeNode *tmp = head->right;
+            TreeNode *tmp = head->right;
             free(head);
             return tmp;
         }
         else if (!head->right) {
-            struct TreeNode *tmp = head->right;
+            TreeNode *tmp = head->right;
             free(head);
             return tmp;
         }
 
-        struct TreeNode *tmp = binary_tree_smallest_node(head->right);
+        TreeNode *tmp = binary_tree_smallest_node(head->right);
         head->val = tmp->val;
         head->right = binary_tree_remove_element(head->right, tmp->val);
     }
@@ -65,7 +65,7 @@ binary_tree_remove_element(TreeNode *head, const int val)
     return head;
 }
 
-TreeNode *
+void
 binary_tree_destroy(TreeNode *head)
 {
     if (!head) return head;
