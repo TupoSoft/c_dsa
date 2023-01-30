@@ -6,9 +6,7 @@ int main(void)
 {
     int data[] = {1, 2, 3};
     int dataSize = sizeof data / sizeof *data;
-    TreeNode *head = NULL;
-
-    for (int i = 0; i < dataSize; ++i) head = binary_tree_insert_element(head, data[i]);
+    TreeNode *head = binary_tree_create_from_data(data, dataSize);
 
     head = binary_tree_remove_element(head, 2);
     binary_tree_print(stdout, head);

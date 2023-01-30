@@ -65,6 +65,16 @@ binary_tree_remove_element(TreeNode *head, const int val)
     return head;
 }
 
+TreeNode *
+binary_tree_create_from_data(const int *data, size_t size)
+{
+    TreeNode *head = NULL;
+
+    for (int i = 0; i < size; ++i) head = binary_tree_insert_element(head, data[i]);
+
+    return head;
+}
+
 void
 binary_tree_destroy(TreeNode *head)
 {
