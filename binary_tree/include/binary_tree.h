@@ -17,7 +17,7 @@ TreeNode *binary_tree_smallest_node(TreeNode *head);
 
 TreeNode *binary_tree_remove_element(TreeNode *head, const int val);
 
-TreeNode *binary_tree_create_from_data(const int *data, size_t size);
+TreeNode *binary_tree_create(const int *data, size_t size);
 
 void binary_tree_destroy(TreeNode *head);
 
